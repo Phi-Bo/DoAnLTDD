@@ -17,11 +17,15 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,7 +45,8 @@ public class Register extends AppCompatActivity {
     private  String confirm;
     private FirebaseAuth firebaseAuth;
     private String nPhonenumber;
-
+    private FirebaseUser muser;
+    private FirebaseAuth mauth;
 
     // nêu code gửi mã xac nhạ ko đc sẽ gửi lại mã thông qua forceResendingToken
     private PhoneAuthProvider.ForceResendingToken forceResendingToken;
@@ -85,7 +90,6 @@ public class Register extends AppCompatActivity {
                 // 2 - Auto-retrieval. On some devices Google Play services can automatically
                 //     detect the incoming verification SMS and perform verification without
                 //     user action.
-
                 SignInWithPhoneAuthCredential(phoneAuthCredential);
             }
             @Override
@@ -94,7 +98,7 @@ public class Register extends AppCompatActivity {
                 // for instance if the the phone number format is not valid.
                 pd.dismiss();
                 pd.setMessage(e.getMessage());
-                Toast.makeText(Register.this, "Bị lỗi lol gì đó", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Register.this, "Sai định dạng số điện thoại", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onCodeSent(@NonNull String verifycationID, @NonNull PhoneAuthProvider.ForceResendingToken token) {
@@ -118,7 +122,6 @@ public class Register extends AppCompatActivity {
                 passWord= txtRegisterPassword.getText().toString().trim();
                 userRef = firebaseDatabase.getReference("userInfo");
                 nPhonenumber= "+84"+phoneNumber.substring(1);
-
                 if(passWord.isEmpty())
                 {
                     txtRegisterPassword.setError("Chưa nhập Mật khẩu");
@@ -168,6 +171,7 @@ public class Register extends AppCompatActivity {
     }
     private void setdatabase()
     {
+
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         String strDate = formatter.format(date);
@@ -180,23 +184,39 @@ public class Register extends AppCompatActivity {
         //gọi api nhập dữ  liệu vào database
         userRef.child(phoneNumber).setValue(userInfo);
         imref.child(phoneNumber).setValue(hashMap);
-        //String t= userRef.child(phoneNumber).child("number").setValue("111").toString();
-        Toast.makeText(this, "Tạo Tài Khoản Thành công", Toast.LENGTH_SHORT).show();
-        //Toast.makeText(this, t, Toast.LENGTH_SHORT).show();
+        Toast.makeText(Register.this, "Tạo Tài Khoản Thành công", Toast.LENGTH_SHORT).show();
     }
 
     private void StartVertifycation()
     {
-        pd.setMessage("Đang xác minh số điên thoại");
-        pd.show();
-        PhoneAuthOptions phoneAuthOptions = PhoneAuthOptions
-                .newBuilder(firebaseAuth)
-                .setPhoneNumber(nPhonenumber)
-                .setTimeout(60L, TimeUnit.SECONDS)
-                .setActivity(this)
-                .setCallbacks(mCallbacks)
-                .build();
-        PhoneAuthProvider.verifyPhoneNumber(phoneAuthOptions);
+        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        @Override
+        public void onDataChange(DataSnapshot snapshot) {
+
+            if (snapshot.hasChild(phoneNumber)) {
+                // tài khoản tồn tại sẽ trả laii fals
+                Toast.makeText(Register.this, "Tài khoản đã tồn tại", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                pd.setMessage("Đang xác minh số điên thoại");
+                pd.show();
+                PhoneAuthOptions phoneAuthOptions = PhoneAuthOptions
+                        .newBuilder(firebaseAuth)
+                        .setPhoneNumber(nPhonenumber)
+                        .setTimeout(60L, TimeUnit.SECONDS)
+                        .setActivity(Register.this)
+                        .setCallbacks(mCallbacks)
+                        .build();
+                PhoneAuthProvider.verifyPhoneNumber(phoneAuthOptions);
+            }
+        }
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+            Toast.makeText(Register.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    });
+
     }
     private void CheckverifyWithcode(String VertivicationID, String code)
     {
