@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewListfriends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="9dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/txtDiscription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="10dp"
+                android:text="this spot discription"
+                app:layout_constraintBottom_toTopOf="@+id/imPoster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imAvatar4"
+                app:layout_constraintTop_toBottomOf="@+id/txtTime" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imAvatar4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/txtNamePoster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="10dp"
+                android:text="username"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imAvatar4"
+                app:layout_constraintTop_toTopOf="@+id/imAvatar4" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="10dp"
+                android:text="0 houre ago"
+                app:layout_constraintBottom_toTopOf="@+id/txtDiscription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toEndOf="@+id/imAvatar4"
+                app:layout_constraintTop_toBottomOf="@+id/txtNamePoster" />
+
+            <ImageView
+                android:id="@+id/imPoster"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imAvatar4"
+                app:srcCompat="@drawable/avatar" />
+
+            <ImageView
+                android:id="@+id/imLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/imPoster"
+                app:layout_constraintTop_toBottomOf="@+id/imPoster"
+                app:srcCompat="@drawable/ic_baseline_thumb_up_24" />
+
+            <TextView
+                android:id="@+id/txtcountLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/imLike"
+                app:layout_constraintStart_toEndOf="@+id/imLike"
+                app:layout_constraintTop_toTopOf="@+id/imLike" />
+
+            <ImageView
+                android:id="@+id/imComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/imPoster"
+                app:layout_constraintTop_toBottomOf="@+id/imPoster"
+                app:srcCompat="@drawable/ic_comment" />
+
+            <TextView
+                android:id="@+id/txtcoutComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="0 bình luận"
+                app:layout_constraintEnd_toStartOf="@+id/imComment"
+                app:layout_constraintTop_toTopOf="@+id/imComment" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="@+id/imComment"
+                app:layout_constraintStart_toStartOf="@+id/imLike"
+                app:layout_constraintTop_toBottomOf="@+id/imLike" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtInputcomment"
+                app:layout_constraintEnd_toEndOf="@+id/imComment"
+                app:layout_constraintStart_toStartOf="@+id/imLike"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <EditText
+                android:id="@+id/txtInputcomment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/input_comment_bg"
+                android:ems="10"
+                android:hint="comment"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:paddingLeft="35dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/recyclerViewComment"
+                app:layout_constraintStart_toStartOf="@+id/recyclerViewComment"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewComment" />
+
+            <ImageView
+                android:id="@+id/imsendComment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtInputcomment"
+                app:layout_constraintEnd_toEndOf="@+id/txtInputcomment"
+                app:layout_constraintTop_toTopOf="@+id/txtInputcomment"
+                app:srcCompat="@android:drawable/ic_menu_send" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
