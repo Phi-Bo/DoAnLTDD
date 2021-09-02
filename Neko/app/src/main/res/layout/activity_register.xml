@@ -4,50 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/galaxy"
     tools:context=".Register">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mật Khẩu"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtRegisterPassword"
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/txtRegisterPassword"
         android:layout_width="251dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="*******"
-        android:text="nhatngao"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        android:text="nhatngao"
+        android:textColor="@color/white"
+        android:textSize="20sp"
 
-    <EditText
-        android:id="@+id/txtRegisterPhoneNumber"
-        android:layout_width="252dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="012345"
-        android:text="+84866039125"
-        android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -55,48 +41,93 @@
         android:layout_height="wrap_content"
         android:text="Số Điện Thoại"
         android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/txtRegisterPhoneNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btnSentRequest"
-        android:layout_width="119dp"
-        android:layout_height="64dp"
-        android:text="Gửi mã xác nhận"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mật Khẩu"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtRegisterPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.799" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/txtRegisterPhoneNumber"
+        android:layout_width="252dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="012345"
+        android:inputType="phone"
+        android:text="+84866039125"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371" />
+
+    <Button
+        android:id="@+id/btnSentRequest"
+        android:layout_width="144dp"
+        android:layout_height="60dp"
+        android:text="Gửi mã xác nhận"
+
+        app:backgroundTint="@android:color/holo_blue_bright"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.627" />
 
     <Button
         android:id="@+id/btnFinish"
-        android:layout_width="111dp"
-        android:layout_height="63dp"
+        android:layout_width="144dp"
+        android:layout_height="60dp"
         android:text="hoàn thành"
+
+        app:backgroundTint="@android:color/holo_blue_bright"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintVertical_bias="0.764" />
 
     <Button
         android:id="@+id/btnResend"
-        android:layout_width="111dp"
-        android:layout_height="63dp"
+        android:layout_width="144dp"
+        android:layout_height="60dp"
         android:text="gửi lại"
+
+        app:backgroundTint="@android:color/holo_blue_bright"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintVertical_bias="0.627" />
 
     <EditText
         android:id="@+id/txtConfirm"

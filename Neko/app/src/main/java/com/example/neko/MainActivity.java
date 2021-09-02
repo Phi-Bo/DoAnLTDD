@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnRegister = (Button) findViewById(R.id.btnRegister);
-        btnFogetPassword = (Button) findViewById(R.id.btnForGetpassWord);
+       // btnFogetPassword = (Button) findViewById(R.id.btnForGetpassWord);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnClose = (Button) findViewById(R.id.btnClose);
         txtPhoneNumber = findViewById(R.id.txtPhoneNumber);

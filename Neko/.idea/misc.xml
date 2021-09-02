@@ -3,6 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/first_user_txt.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/ic_add.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/ic_baseline_thumb_up_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/ic_comment.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/ic_search_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/input_add_post_bg.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/input_comment_bg.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/mm.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/drawable/secont_user_txt.xml" value="0.19166666666666668" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/activity_chat.xml" value="0.2" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/activity_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/activity_register_name.xml" value="0.25" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/activity_the_friends.xml" value="0.17552083333333332" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/app_bar_chat.xml" value="0.5" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/draw_header.xml" value="0.25" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/friendslist.xml" value="0.5" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/main_app_bar.xml" value="0.17552083333333332" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/poster.xml" value="0.17552083333333332" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/singele_view_sms.xml" value="0.33" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/single_view_comment.xml" value="0.5" />
+        <entry key="..\:/Ume/Neko/app/src/main/res/layout/strange_person.xml" value="0.33" />
         <entry key="..\:/test/Neko/app/src/main/res/drawable/ic_add.xml" value="0.2755208333333333" />
         <entry key="..\:/test/Neko/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.2755208333333333" />
         <entry key="..\:/test/Neko/app/src/main/res/layout/activity_chat.xml" value="0.259375" />
@@ -15,7 +40,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

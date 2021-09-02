@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:background="@null">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imfrUser"
@@ -24,19 +24,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/first_user_txt"
+        android:background="@drawable/secont_user_txt"
         android:paddingStart="10dp"
         android:paddingTop="8dp"
         android:paddingRight="8dp"
         android:paddingBottom="10dp"
         android:text="TextView"
-        android:textColor="@color/cardview_dark_background"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imfrUser"
         app:layout_constraintEnd_toStartOf="@+id/imScUser"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toEndOf="@+id/imfrUser"
         app:layout_constraintTop_toTopOf="@+id/imfrUser"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="wrap" />
 
     <TextView
@@ -51,7 +50,7 @@
         android:paddingRight="8dp"
         android:paddingBottom="10dp"
         android:text="TextView"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imfrUser"
         app:layout_constraintEnd_toStartOf="@+id/imScUser"
         app:layout_constraintHorizontal_bias="1.0"

@@ -5,7 +5,7 @@
     android:id="@+id/click"
     android:layout_width="match_parent"
     android:layout_height="130dp"
-    android:background="#ADF1C6"
+    android:background="@drawable/galaxy2"
     android:clickable="true"
     android:clipChildren="true">
 
@@ -16,11 +16,12 @@
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/cardview_light_background"
+        android:background="@null"
         android:lineSpacingExtra="8sp"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:typeface="normal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imAvarta"
