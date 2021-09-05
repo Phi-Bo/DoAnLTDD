@@ -1,7 +1,7 @@
 package com.example.neko.Utills;
 
 public class Chat {
-    public  String sms,userid;
+    public  String sms,userid,isdelete,statusMess;
 
     public Chat() {
     }

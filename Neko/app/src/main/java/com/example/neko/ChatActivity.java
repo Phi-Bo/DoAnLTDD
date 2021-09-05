@@ -28,6 +28,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
     public class ChatActivity extends AppCompatActivity {
@@ -83,6 +85,17 @@ import java.util.HashMap;
     }
         private void LoadSms()
         {
+
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+            String strDate = formatter.format(date);
+
+            HashMap hashMap = new HashMap();
+            hashMap.put("statusMess","đã xem");
+            hashMap.put("viewOn",strDate);
+
+
+
             options= new FirebaseRecyclerOptions.Builder<Chat>().setQuery(chatRef.child(myNumber).child(orderUserId),Chat.class).build();
             chatAdapter= new FirebaseRecyclerAdapter<Chat, ChatViewHoder>(options) {
                 @Override
@@ -93,7 +106,6 @@ import java.util.HashMap;
                         holder.imfruser.setVisibility(View.GONE);
                         holder.txtscuser.setVisibility(View.VISIBLE);
                         holder.imscuser.setVisibility(View.VISIBLE);
-
                         holder.txtscuser.setText(model.sms);
                     }
                     else
@@ -128,20 +140,32 @@ import java.util.HashMap;
                 txtchatMess.requestFocus();
             }
             else {
+                // thêm ngày giờ
+                Date date = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+                String strDate = formatter.format(date);
+
                 HashMap hashMap = new HashMap();
                 hashMap.put("sms",txtchatMess.getText().toString());
                 hashMap.put("userid",myNumber);
+                hashMap.put("sendTime",strDate);
+                hashMap.put("statusMess","đã gửi");
+                hashMap.put("isDeleted","false");
+                hashMap.put("viewOn","");
+
+
+
                 chatRef.child(orderUserId).child(myNumber).push().updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull  Task task) {
                         if (task.isSuccessful())
                         {
+
                             chatRef.child(myNumber).child(orderUserId).push().updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                                 @Override
                                 public void onComplete(@NonNull  Task task) {
                                     if (task.isSuccessful())
                                     {
-                                        Toast.makeText(ChatActivity.this, "sms", Toast.LENGTH_SHORT).show();
                                         txtchatMess.setText("");
                                     }
                                 }

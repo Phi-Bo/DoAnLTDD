@@ -401,7 +401,7 @@ public class Profile extends AppCompatActivity {
         if (added) {
             friends = added;
             imAddfriends.setVisibility(View.VISIBLE);
-             userId = getIntent().getStringExtra("userkey");
+            userId = getIntent().getStringExtra("userkey");
             userRef.child(userId).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
