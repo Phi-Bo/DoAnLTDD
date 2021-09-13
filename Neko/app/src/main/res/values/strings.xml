@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Neko</string>
+    <string name="forgot_your_password">Did someone forgot their password?</string>
+    <string name="email">Email</string>
+    <string name="say_something">Its ok..</string>
+    <string name="say_something2">Just enter your email and then remake your new password!</string>
+    <string name="next">Next</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm">Confirm password</string>
+    <string name="please_enter_your_new_password">Enter your new password</string>
+    <string name="warning_confirm_password">Password dose\'nt match</string>
+    <string name="warning_password_character">Your password must be 6 characters long</string>
+    <string name="fill_the_blank">Hmm…what is your new password!?</string>
+
+
 </resources>

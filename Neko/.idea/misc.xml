@@ -28,6 +28,12 @@
         <entry key="..\:/Ume/Neko/app/src/main/res/layout/singele_view_sms.xml" value="0.33" />
         <entry key="..\:/Ume/Neko/app/src/main/res/layout/single_view_comment.xml" value="0.5" />
         <entry key="..\:/Ume/Neko/app/src/main/res/layout/strange_person.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Ume chat/Neko/app/src/main/res/drawable/ic_back.xml" value="0.3854166666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Ume chat/Neko/app/src/main/res/drawable/style_button.xml" value="0.3854166666666667" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Ume chat/Neko/app/src/main/res/font/alice.xml" value="0.39947916666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Ume chat/Neko/app/src/main/res/layout/activity_chat.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Ume chat/Neko/app/src/main/res/layout/activity_forgot_password.xml" value="0.3692708333333333" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Ume chat/Neko/app/src/main/res/layout/activity_new_password.xml" value="0.3692708333333333" />
         <entry key="..\:/test/Neko/app/src/main/res/drawable/ic_add.xml" value="0.2755208333333333" />
         <entry key="..\:/test/Neko/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.2755208333333333" />
         <entry key="..\:/test/Neko/app/src/main/res/layout/activity_chat.xml" value="0.259375" />
@@ -40,7 +46,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

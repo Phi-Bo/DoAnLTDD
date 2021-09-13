@@ -91,7 +91,18 @@ public class MainActivity extends AppCompatActivity {
                }
             }
         });
+
+        //// FORGOT PASSWORD ///////
+        btnFogetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgotpassIntent = new Intent(MainActivity.this, NewPasswordActivity.class);
+                startActivity(forgotpassIntent);
+            }
+        });
     }
+
+
 
     // hàm gọi activity dăng kí tài khoản
     public  void openActivity_Register()
