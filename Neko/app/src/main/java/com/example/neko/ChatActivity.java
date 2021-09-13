@@ -153,8 +153,6 @@ import java.util.HashMap;
                 hashMap.put("isDeleted","false");
                 hashMap.put("viewOn","");
 
-
-
                 chatRef.child(orderUserId).child(myNumber).push().updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull  Task task) {
