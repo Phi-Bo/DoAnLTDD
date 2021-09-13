@@ -45,7 +45,7 @@ public class ChatViewHoder extends RecyclerView.ViewHolder {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot snapshot1:snapshot.getChildren()) {
-nhat
+
                 }
             }
 
