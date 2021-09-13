@@ -1,7 +1,27 @@
 package com.example.neko.Utills;
 
 public class Chat {
-    public  String sms,userid;
+    public  String sms;
+    public String userid;
+    public String isdelete;
+
+    public String getIsdelete() {
+        return isdelete;
+    }
+
+    public void setIsdelete(String isdelete) {
+        this.isdelete = isdelete;
+    }
+
+    public String getStatusMess() {
+        return statusMess;
+    }
+
+    public void setStatusMess(String statusMess) {
+        this.statusMess = statusMess;
+    }
+
+    public String statusMess;
 
     public Chat() {
     }
@@ -22,8 +42,12 @@ public class Chat {
         this.userid = userid;
     }
 
-    public Chat(String sms, String userid) {
+
+    public Chat(String sms, String userid, String isdelete, String statusMess) {
         this.sms = sms;
         this.userid = userid;
+        this.isdelete = isdelete;
+        this.statusMess = statusMess;
     }
+
 }

@@ -69,5 +69,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/txtFrSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:hint="seen"
+        app:layout_constraintEnd_toStartOf="@+id/imScUser"
+        app:layout_constraintTop_toBottomOf="@+id/txtfrChat" />
+
+    <TextView
+        android:id="@+id/txtScSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Seen"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imfrUser"
+        app:layout_constraintTop_toBottomOf="@+id/txtscChat" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
